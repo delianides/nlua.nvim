@@ -69,6 +69,7 @@ https://github.com/bfredl/nvim-luadev
     - Status:
         - It works when you write out the full names... but that doesn't seem super great
         - Kind of words when you type the whole name, but could have name clashes? Not clear.
+        - Key can be overridden by setting `g:nlua_keyword_program`
 - [ ] Add a `completion.nvim` source for currently available globals.
     - This won't be as good as something like sumneko, because that does actual analysis.
         But it could be good for finding all the things in `vim.api.*` etc.

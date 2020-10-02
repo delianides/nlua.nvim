@@ -45,6 +45,8 @@ return function()
   --    if vim.api.nvim_buf_get_option(0, 'filetype') ~= 'lua' then
   --      mapper('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
   --    end
-  -- TODO: Customize keymap
-  vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua nlua.keyword_program()<CR>', {noremap = true, silent = true})
+  if not vim.g.nlua_keyword_program then
+    vim.g.nlua_keyword_program = 'K'
+  end
+  vim.api.nvim_buf_set_keymap(0, 'n', vim.g.nlua_keyword_program, '<cmd>lua nlua.keyword_program()<CR>', {noremap = true, silent = true})
 end
